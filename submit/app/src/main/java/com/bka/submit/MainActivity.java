@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText email;
     Button submit;
 
+    String name, mail, id, date, phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,20 +33,27 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (hoten == null) {
-                    Toast.makeText(MainActivity.this, "chua nhap ho ten", Toast.LENGTH_SHORT);
+
+                name = hoten.getText().toString();
+                mail = email.getText().toString();
+                id = mssv.getText().toString();
+                date = ngaysinh.getText().toString();
+                phone = sdt.getText().toString();
+
+                if (name.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "chua nhap ho ten", Toast.LENGTH_SHORT).show();
                 }
 
-                if (mssv == null) {
-                    Toast.makeText(MainActivity.this, "chua nhap mssv", Toast.LENGTH_SHORT);
+                if (mail.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "chua nhap mssv", Toast.LENGTH_SHORT).show();
                 }
 
-                if (sdt == null) {
-                    Toast.makeText(MainActivity.this, "chua nhap sdt", Toast.LENGTH_SHORT);
+                if (id.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "chua nhap sdt", Toast.LENGTH_SHORT).show();
                 }
 
-                if (email == null) {
-                    Toast.makeText(MainActivity.this, "chua nhap email", Toast.LENGTH_SHORT);
+                if (mail.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "chua nhap email", Toast.LENGTH_SHORT).show();
                 }
 
             }
